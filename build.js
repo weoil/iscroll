@@ -54,7 +54,19 @@ var releases = {
 		],
 		postProcessing: [ 'zoom/build.json', 'indicator/build.json', 'wheel/build.json', 'snap/build.json', 'keys/build.json' ]
 	},
-
+	custom: {
+		files: [
+			'indicator/_initIndicators.js',
+			'zoom/zoom.js',
+			'wheel/wheel.js',
+			'snap/snap.js',
+			'keys/keys.js',
+			'probe/_animate.js',
+			'zoom/handleEvent.js',
+			'indicator/indicator.js'
+		],
+		postProcessing: [ 'zoom/build.json', 'indicator/build.json', 'wheel/build.json', 'snap/build.json', 'keys/build.json', 'probe/build.json' ]
+	},
 	infinite: {
 		files: [
 			'wheel/wheel.js',
@@ -75,7 +87,7 @@ if ( !args.length ) {
 }
 
 if ( args[0] == 'dist' ) {
-	args = ['lite', 'iscroll', 'zoom', 'probe', 'infinite'];
+	args = ['lite', 'iscroll', 'zoom', 'probe', 'infinite', 'custom'];
 }
 
 // Get the list of files
